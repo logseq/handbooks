@@ -105,3 +105,4 @@ dist
 
 .idea
 .nrepl-port
+.outputs
