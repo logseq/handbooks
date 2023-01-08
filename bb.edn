@@ -1,0 +1,14 @@
+{:paths ["scripts"]
+
+ :pods  {org.babashka/fswatcher {:version "0.0.4"}}
+
+ :deps  {org.babashka/http-server  {:mvn/version "0.1.11"}
+         markdown-clj/markdown-clj {:mvn/version "1.11.4"}}
+
+ :tasks {dev   {:docs "Auto build docs for development mode!"
+                :task build/start-dev-mode!}
+
+         build {:docs "Build docs for production mode!"
+                :task build/start-prod-mode!}
+
+         nrepl (shell "bb nrepl-server 1667")}}
