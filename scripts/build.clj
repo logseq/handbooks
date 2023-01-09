@@ -16,7 +16,9 @@
 
 (def DOCS_ROOT (fs/path (fs/cwd) "docs"))
 (def OUTPUTS_ROOT (fs/path (fs/cwd) "outputs"))
-(fs/create-dir OUTPUTS_ROOT)
+
+(when-not (fs/exists? OUTPUTS_ROOT)
+  (fs/create-dir OUTPUTS_ROOT))
 
 (defn- resolve-docs-file-or-dirs!
   ([filepath] (resolve-docs-file-or-dirs! filepath false))
@@ -43,9 +45,47 @@
          dir?
          (fs/list-dir))))))
 
-(defn- build-docs
-  ([] (build-docs false))
-  ([dev-mode?]
+(defn- parse-md-assets!
+  [content assets-fn!]
+  (if-let [matched (re-seq #"src\s*=\s*\"([^\"]+)\"" content)]
+    (do
+      (assets-fn! (map second matched))
+      (reduce #(string/replace %1 (first %2) (string/replace (first %2) "/" "_")) content matched))
+    content))
+
+(defn- parse-assets-from-a-category!
+  [category file]
+  (let [relative-root (fs/parent file)
+        assets-fn!    (fn [assets]
+                        (prn "[Handle assets]" assets)
+                        (-> assets
+                            identity))]
+    (cond-> category
+
+      (not (string/blank? (:content category)))
+      (assoc :content (parse-md-assets! (:content category) assets-fn!))
+
+      (seq (:demos category))
+      (assoc :demos (assets-fn! (:demos category))))))
+
+(defn- ensure-output-assets-dir!
+  []
+  (let [f (fs/path OUTPUTS_ROOT "assets")]
+    (when-not (fs/exists? f)
+      (fs/create-dir f)) f))
+
+(defn- build-assets!
+  [categories]
+  (when-let [categories (seq categories)]
+    (doseq [f categories
+            :let [f' (fs/path f "assets")]]
+      (when-let [f'' (and (fs/directory? f') (ensure-output-assets-dir!))]
+        (println "D:found-assets:" f')
+        (fs/copy-tree f' f'' {:replace-existing true})))))
+
+(defn- build-docs!
+  ([] (build-docs! false true))
+  ([dev-mode? build-assets?]
    (let [output     (resolve-docs-file-or-dirs! "./config.edn")
          categories (sort (filterv fs/directory? (resolve-docs-file-or-dirs! ".")))]
      (let [results (->> categories
@@ -60,21 +100,26 @@
                                            (->> items'
                                                 (map #(let [config       (resolve-docs-file-or-dirs! %)
                                                             content-file (fs/file (string/replace-first (.toString %) #".edn$" ".md"))]
-                                                        (cond-> config
+                                                        (-> (cond-> config
 
-                                                          (and (nil? (:content config))
-                                                               (fs/exists? content-file))
-                                                          (assoc :content (resolve-docs-file-or-dirs! content-file)))))
+                                                              (and (nil? (:content config))
+                                                                   (fs/exists? content-file))
+                                                              (assoc :content (resolve-docs-file-or-dirs! content-file))))))
 
                                                 (assoc category :children)))))))
                         (assoc output :children))
            results (assoc results :version (.toString (LocalDateTime/now)))]
+
+       ;; save assets
+       (when build-assets?
+         (build-assets! categories))
 
        ;; save outputs
        (spit (fs/file (fs/path OUTPUTS_ROOT "handbooks.edn")) (pr-str results))
 
        (when-not dev-mode?
          (spit (fs/file (fs/path OUTPUTS_ROOT "handbooks.json")) (json/generate-string results)))
+
        results))))
 
 (defn start-dev-mode!
@@ -82,8 +127,10 @@
 
   (println "[Start watcher]")
   (let [build! #(time
-                 (when-let [ret (build-docs true)]
-                   (println "[Build docs] " (:version ret) %)))]
+                 (let [build-assets? (or (= :init %)
+                                         (string/includes? % "/assets"))]
+                   (when-let [ret (build-docs! true build-assets?)]
+                     (println "[Build] " (:version ret) (str %)))))]
     ;; watch docs files changes
     (fw/watch (.toString (fs/real-path DOCS_ROOT))
               #(let [changed-file (:path %)]
@@ -92,7 +139,7 @@
                    (build! changed-file)))
               {:recursive true
                :delay-ms  500})
-    (build! "Initialize!"))
+    (build! :init))
 
   (println "[Start server]")
   (start-server!))
@@ -100,7 +147,7 @@
 (defn start-prod-mode!
   []
   (time
-   (let [ret (build-docs)]
+   (let [ret (build-docs!)]
      (println "Docs version:" (:version ret)))))
 
 (comment
