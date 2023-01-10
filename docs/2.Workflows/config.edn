@@ -1,4 +1,5 @@
 {:title "🐙Workflows"
+ :description "This is sub description"
  ;; The children items will be constructed in Build time
  ;; :children []
  }
