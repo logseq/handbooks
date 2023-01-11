@@ -1,13 +1,13 @@
-install-babashka:
+build-ci:
 	curl -sLO https://raw.githubusercontent.com/babashka/babashka/master/install
 	chmod +x install && ./install --dir .
-	export PATH=$PATH:$(pwd)
-
-dev:clean
-	bb dev
+	./bb build
 
 build:clean
 	bb build
+
+dev:clean
+	bb dev
 
 clean:
 	rm -rf outputs
