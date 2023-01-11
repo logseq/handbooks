@@ -2,8 +2,9 @@
 
  :pods  {org.babashka/fswatcher {:version "0.0.4"}}
 
- :deps  {org.babashka/http-server  {:mvn/version "0.1.11"}
-         markdown-clj/markdown-clj {:mvn/version "1.11.4"}}
+ :deps  {org.babashka/http-server            {:mvn/version "0.1.11"}
+         markdown-clj/markdown-clj           {:mvn/version "1.11.4"}
+         camel-snake-kebab/camel-snake-kebab {:mvn/version "0.4.3"}}
 
  :tasks {dev   {:docs "Auto build docs for development mode!"
                 :task build/start-dev-mode!}

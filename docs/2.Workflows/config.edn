@@ -1,5 +1,7 @@
-{:title "🐙Workflows"
+{:title       "🐙Workflows"
  :description "This is sub description"
- ;; The children items will be constructed in Build time
+ :color       "#14a44a"
+
+ ;; [optional] Currently, the children items will be constructed in build time
  ;; :children []
  }

@@ -9,5 +9,8 @@ build:clean
 dev:clean
 	bb dev
 
+nrepl:
+	bb nrepl
+
 clean:
 	rm -rf outputs

@@ -1,3 +1,4 @@
 {:paths ["scripts"]
  :deps  {org.babashka/http-server  {:mvn/version "0.1.11"}
-         markdown-clj/markdown-clj {:mvn/version "1.11.4"}}}
+         markdown-clj/markdown-clj {:mvn/version "1.11.4"}
+         camel-snake-kebab         {:mvn/version "0.4.3"}}}

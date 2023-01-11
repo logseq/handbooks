@@ -1,5 +1,7 @@
-{:title "🔆Onboarding"
+{:title       "🔆Onboarding"
  :description "This is sub description"
- ;; The children items will be constructed in Build time
+ :color       "#dd2624"
+
+ ;; [optional] Currently, the children items will be constructed in build time
  ;; :children []
  }

@@ -6,7 +6,8 @@
             [markdown.core :as md]
             [clojure.edn :as edn]
             [clojure.string :as string]
-            [pod.babashka.fswatcher :as fw])
+            [pod.babashka.fswatcher :as fw]
+            [camel-snake-kebab.core :as csk])
 
   (:import (java.time LocalDateTime)))
 
@@ -97,16 +98,20 @@
                                          (when-let [category (or (some-> (first category)
                                                                          (resolve-docs-file-or-dirs!))
                                                                  {:title (fs/file-name f)})]
-                                           (->> items'
-                                                (map #(let [config       (resolve-docs-file-or-dirs! %)
-                                                            content-file (fs/file (string/replace-first (.toString %) #".edn$" ".md"))]
-                                                        (-> (cond-> config
+                                           (let [category-k (csk/->snake_case_string (fs/file-name f))
+                                                 category   (assoc category :key category-k)]
 
-                                                              (and (nil? (:content config))
-                                                                   (fs/exists? content-file))
-                                                              (assoc :content (resolve-docs-file-or-dirs! content-file))))))
+                                             (->> items'
+                                                  (map #(let [config       (resolve-docs-file-or-dirs! %)
+                                                              content-file (fs/file (string/replace-first (.toString %) #".edn$" ".md"))]
+                                                          (-> (cond-> config
 
-                                                (assoc category :children)))))))
+                                                                (and (nil? (:content config))
+                                                                     (fs/exists? content-file))
+                                                                (assoc :content (resolve-docs-file-or-dirs! content-file)))
+                                                              (assoc :key (str category-k "/" (csk/->snake_case_string (fs/file-name content-file)))))))
+
+                                                  (assoc category :children))))))))
                         (assoc output :children))
            results (assoc results :version (.toString (LocalDateTime/now)))]
 
