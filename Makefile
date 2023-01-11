@@ -1,5 +1,7 @@
 install-babashka:
-	curl -s https://raw.githubusercontent.com/babashka/babashka/master/install
+	curl -sLO https://raw.githubusercontent.com/babashka/babashka/master/install
+	chmod +x install
+	./install
 
 dev:clean
 	bb dev
