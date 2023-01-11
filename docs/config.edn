@@ -1,6 +1,10 @@
-{:title   "Logseq Handbooks"
- :version "0.0.1"
+{:title          "Logseq Handbooks"
+ :version        "0.0.1"
 
  ;; [optional] Currently, the children items will be constructed in build time
  ;; :children []
+
+ ;; [optional] popular topics from home
+ :popular-topics ["1.Onboarding/1.welcome-to-logseq"
+                  "1.Onboarding/2.what-is-outliner"]
  }

@@ -98,7 +98,8 @@
                                          (when-let [category (or (some-> (first category)
                                                                          (resolve-docs-file-or-dirs!))
                                                                  {:title (fs/file-name f)})]
-                                           (let [category-k (csk/->snake_case_string (fs/file-name f))
+                                           (let [category-k (csk/->snake_case_string
+                                                             (string/lower-case (fs/file-name f)))
                                                  category   (assoc category :key category-k)]
 
                                              (->> items'
@@ -109,7 +110,8 @@
                                                                 (and (nil? (:content config))
                                                                      (fs/exists? content-file))
                                                                 (assoc :content (resolve-docs-file-or-dirs! content-file)))
-                                                              (assoc :key (str category-k "/" (csk/->snake_case_string (fs/file-name content-file)))))))
+                                                              (assoc :key (str category-k "/" (csk/->snake_case_string
+                                                                                               (string/lower-case (fs/file-name (fs/strip-ext content-file)))))))))
 
                                                   (assoc category :children))))))))
                         (assoc output :children))
