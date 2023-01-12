@@ -1,0 +1,4 @@
+{:title       "📖 Logseq topic for Handbook!"
+ :description "🎉 A sample text field"
+ :content     "# Content from your hands!"
+ :demos       ["./assets/md.png"]}

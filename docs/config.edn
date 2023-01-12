@@ -6,5 +6,6 @@
 
  ;; [optional] popular topics from home
  :popular-topics ["1.Onboarding/1.welcome-to-logseq"
-                  "1.Onboarding/2.what-is-outliner"]
+                  "1.Onboarding/2.what-is-outliner"
+                  "2.Workflows/1.get-start"]
  }
