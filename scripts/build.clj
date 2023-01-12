@@ -110,8 +110,9 @@
                                                                 (and (nil? (:content config))
                                                                      (fs/exists? content-file))
                                                                 (assoc :content (resolve-docs-file-or-dirs! content-file)))
-                                                              (assoc :key (str category-k "/" (csk/->snake_case_string
-                                                                                               (string/lower-case (fs/file-name (fs/strip-ext content-file)))))))))
+                                                              (assoc :key (-> (str category-k "/" (fs/file-name (fs/strip-ext content-file)))
+                                                                              (string/lower-case)
+                                                                              (csk/->snake_case_string))))))
 
                                                   (assoc category :children))))))))
                         (assoc output :children))
