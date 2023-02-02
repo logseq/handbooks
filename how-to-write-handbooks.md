@@ -60,7 +60,11 @@ A sample from `docs/1.Onboarding/1.welcome-to-logseq.edn`
  :description "This is a sub description text"
 
  ;; [Optional] Some images or videos to demonstrate features
- :demos       ["./assets/demo.png"]
+ :demos       ["./assets/demo.png"
+               ;; support: Local video
+               "./assets/x.mp4"
+               ;; support: YouTube video
+               "https://www.youtube.com/watch?v=uig8_3kqhjY"]
 
  ;; [Optional] This value will be auto generated from the same name markdown file. `1.welcome-to-logseq.md`
  ;; :content ""
