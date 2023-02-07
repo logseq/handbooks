@@ -84,6 +84,31 @@
         (println "D:found-assets:" f')
         (fs/copy-tree f' f'' {:replace-existing true})))))
 
+(defn- resolve-children
+  ([parent-key children]
+   (resolve-children true parent-key children))
+  ([root-or-fullpath? parent-key children]
+   (->> (map (fn [k]
+               (let [ext? (= "edn" (fs/extension k))
+                     f    (if (true? root-or-fullpath?)
+                            (fs/file k)
+                            (fs/path root-or-fullpath? (if ext? k (str k ".edn"))))]
+                 (if-not (fs/exists? f)
+                   (println "❌Error: topic file not exists! " f)
+                   (let [config       (resolve-docs-file-or-dirs! f)
+                         content-file (fs/file (string/replace-first (.toString f) #".edn$" ".md"))]
+                     [f (-> (cond-> config
+
+                              (and (nil? (:content config))
+                                   (fs/exists? content-file))
+                              (assoc :content (resolve-docs-file-or-dirs! content-file)))
+
+                            (assoc :key (-> (str parent-key "/" (fs/file-name (fs/strip-ext content-file)))
+                                            (string/lower-case)
+                                            (csk/->snake_case_string))))]))))
+             children)
+        (remove nil?))))
+
 (defn- build-docs!
   ([] (build-docs! false true))
   ([dev-mode? build-assets?]
@@ -100,20 +125,20 @@
                                                                  {:title (fs/file-name f)})]
                                            (let [category-k (csk/->snake_case_string
                                                              (string/lower-case (fs/file-name f)))
-                                                 category   (assoc category :key category-k)]
+                                                 category   (assoc category :key category-k)
+                                                 children   (:children category)]
 
-                                             (->> items'
-                                                  (map #(let [config       (resolve-docs-file-or-dirs! %)
-                                                              content-file (fs/file (string/replace-first (.toString %) #".edn$" ".md"))]
-                                                          (-> (cond-> config
-
-                                                                (and (nil? (:content config))
-                                                                     (fs/exists? content-file))
-                                                                (assoc :content (resolve-docs-file-or-dirs! content-file)))
-                                                              (assoc :key (-> (str category-k "/" (fs/file-name (fs/strip-ext content-file)))
-                                                                              (string/lower-case)
-                                                                              (csk/->snake_case_string))))))
-
+                                             ;; resolve category children (topics)
+                                             (->> (if-not (nil? children)
+                                                    (resolve-children f category-k children)
+                                                    (resolve-children category-k items'))
+                                                  ;; resolve topic children (chapters)
+                                                  (map (fn [[f' t]]
+                                                         (if-let [children (:children t)]
+                                                           (->> (resolve-children (fs/parent f') (:key t) children)
+                                                                (map second)
+                                                                (assoc t :children))
+                                                           t)))
                                                   (assoc category :children))))))))
                         (assoc output :children))
            results (assoc results :version (.toString (LocalDateTime/now)))]
@@ -126,7 +151,8 @@
        (spit (fs/file (fs/path OUTPUTS_ROOT "handbooks.edn")) (pr-str results))
 
        (when-not dev-mode?
-         (spit (fs/file (fs/path OUTPUTS_ROOT "handbooks.json")) (json/generate-string results)))
+         (spit (fs/file (fs/path OUTPUTS_ROOT "handbooks.json"))
+               (json/generate-string results)))
 
        results))))
 

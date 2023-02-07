@@ -1,0 +1,13 @@
+{
+ ;; [Required] A friendly title for user
+ :title       "🌏 How to join Logseq community?"
+
+ ;; [Optional]
+ :description "It's a chapter of a topic"
+
+ ;; [Optional] Some images or videos to demonstrate features
+ :demos       "./assets/demo.png"
+
+ ;; [Optional] This value will be auto generated from the same name markdown file. `1.welcome-to-logseq.md`
+ :content     "Hello - chapter 2"
+ }

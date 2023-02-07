@@ -13,4 +13,7 @@
 
  ;; [Optional] a thumb image for topics list
  :cover       "./assets/demo.png"
+
+ :children    ["1.welcome-to-logseq_chapter-1"
+               "1.welcome-to-logseq_chapter-2.edn"]
  }
