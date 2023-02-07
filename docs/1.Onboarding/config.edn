@@ -3,5 +3,7 @@
  :color       "#dd2624"
 
  ;; children as Topics
- :children    ["1.welcome-to-logseq"]
+ :children    ["1.welcome-to-logseq"
+               "2.what-is-outliner"
+               "3.the-third-topic"]
  }
