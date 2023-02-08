@@ -132,7 +132,8 @@ you can update the content via Github Pull Request.
 > Online data source: https://handbooks.pages.dev/handbooks.json
 
 #### Videos
-https://github.com/logseq/handbooks/issues/1
+
+ref link: [🔗 A video to show how to write docs](https://github.com/logseq/handbooks/issues/1)
 
 <video width="100%" height="auto" controls>
   <source src="https://user-images.githubusercontent.com/1779837/217492648-d1cba1ad-9c35-48b2-9ba1-ed26f70b1efd.mp4" type="video/mp4">
