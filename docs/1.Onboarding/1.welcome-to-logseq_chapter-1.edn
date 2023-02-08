@@ -6,5 +6,7 @@
  :description "It's a chapter of a topic"
 
  ;; [Optional] Some images or videos to demonstrate features
- ;:demos       "./assets/demo.png"
+ :demos       ["./assets/x.mp4"
+               "https://www.youtube.com/watch?v=uig8_3kqhjY"
+               "./assets/demo.png"]
  }

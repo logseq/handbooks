@@ -38,8 +38,11 @@ which is used to configure the meta information of that `category`.
  :description "This is sub description"
  :color       "#dd2624"
 
- ;; [optional] Currently, the children items will be built from topics meta files
- ;; :children []
+ ;; [optional] children as topics, if not set this field,
+ ;; the children items will be built from topics meta files
+ :children    ["1.welcome-to-logseq"
+               "2.what-is-outliner"
+               "3.the-third-topic"]
  }
 ```
 
@@ -71,8 +74,16 @@ A sample from `docs/1.Onboarding/1.welcome-to-logseq.edn`
 
  ;; [Optional] a thumb image for topics list
  :cover       "./assets/demo.png"
+
+ ;; [Optional] children as chapters
+ ;; If it is not set, it means that the topic has no subchapter
+ :children    ["1.welcome-to-logseq_chapter-1.edn"
+               "2.welcome-to-logseq_chapter-2"]
  }
 ```
+
+> ⚠️What's a **Chapter**?  
+> A topic can be composed of 0 or more chapters. Chapter itself is also a Topic type.
 
 ##### How to write the content of topic?
 
