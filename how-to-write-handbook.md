@@ -122,3 +122,11 @@ make dev
 
 This command will listen to the file changes under `docs/*`
 and build the handbook data to be used by the client.
+
+#### ⚠️ How to publish updates to user?
+
+The project has been configured with Github CI to deploy the latest updates,
+which will take effect immediately when the master branch has content changes.
+So if you don't want the changes to take effect immediately on the Logseq client,
+you can update the content via Github Pull Request.
+> Online data source: https://handbooks.pages.dev/handbooks.json
