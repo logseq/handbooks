@@ -2,7 +2,7 @@
 
 The current handbook resources are all stored in the `docs` directory.
 
-### Root
+## Root
 
 In the root directory, there is a global configuration file `docs/config.edn` that describes the basic meta information
 of handbook.
@@ -26,7 +26,7 @@ of handbook.
 > which are beneficial for future scalability, and writing experience.
 > https://github.com/edn-format/edn
 
-### Categories
+## Categories
 
 The current top-level grouping of Handbook is abstracted through `Categories`,
 which are derived from the first level of directories under `docs/*`.
@@ -46,7 +46,7 @@ which is used to configure the meta information of that `category`.
  }
 ```
 
-### Topics
+## Topics
 
 Each `Category` is composed of one or more `Topics`,
 and it's also the unit component of Handbook. Currently, you can create a `Topic`
@@ -82,17 +82,18 @@ A sample from `docs/1.Onboarding/1.welcome-to-logseq.edn`
  }
 ```
 
-> ⚠️What's a **Chapter**?  
-> A topic can be composed of 0 or more chapters. Chapter itself is also a Topic type.
+### What's a **Chapter**?
 
-##### How to write the content of topic?
+A topic can be composed of 0 or more chapters. `Chapter` itself is also a `Topic` type.
+
+### How to write the content of topic?
 
 For the body content of the topic, it is described by the `:content` field.
 You can fill this field directly in the metafile, but it may be inconvenient
 when the content is too long, so we support that a `.md` file of the same name can also
 be used to describe the `:content` field, which will be compiled html string during compilation.
 
-#### How to link an asset file?
+### How to link an asset file?
 
 In order to reduce the complexity of the build logic,
 `topic` references to assets files are currently processed by convention.
