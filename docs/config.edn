@@ -1,4 +1,4 @@
-{:title          "Logseq Handbooks"
+{:title          "Logseq Handbook"
  :version        "0.0.1"
 
  ;; [optional] Currently, the children items will be constructed in build time

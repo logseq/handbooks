@@ -1,14 +1,14 @@
-# 📖 Handbooks specifications
+# 📖 Handbook specifications
 
-The current handbooks resources are all stored in the `docs` directory.
+The current handbook resources are all stored in the `docs` directory.
 
 ### Root
 
 In the root directory, there is a global configuration file `docs/config.edn` that describes the basic meta information
-of handbooks.
+of handbook.
 
 ```clojure
-{:title          "Logseq Handbooks"
+{:title          "Logseq Handbook"
  :version        "0.0.1"
 
  ;; [optional] Currently, the children items will be built from categories folders
@@ -28,7 +28,7 @@ of handbooks.
 
 ### Categories
 
-The current top-level grouping of Handbooks is abstracted through `Categories`,
+The current top-level grouping of Handbook is abstracted through `Categories`,
 which are derived from the first level of directories under `docs/*`.
 Each Category folder also corresponds to a configuration file `docs/category/config.edn`,
 which is used to configure the meta information of that `category`.
@@ -49,7 +49,7 @@ which is used to configure the meta information of that `category`.
 ### Topics
 
 Each `Category` is composed of one or more `Topics`,
-and it's also the unit component of Handbooks. Currently, you can create a `Topic`
+and it's also the unit component of Handbook. Currently, you can create a `Topic`
 by creating a `docs/category/xxx-topic-file.edn` metafile in the `Category` folder.
 
 A sample from `docs/1.Onboarding/1.welcome-to-logseq.edn`
@@ -120,4 +120,4 @@ make dev
 ```
 
 This command will listen to the file changes under `docs/*`
-and build the handbooks data to be used by the client.
+and build the handbook data to be used by the client.

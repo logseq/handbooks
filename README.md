@@ -1,6 +1,7 @@
 # handbooks
-Handbooks resources for Logseq.
 
-## How to write handbooks topics?
+Handbook data source for Logseq.
 
-[👉 How to write handbooks?](./how-to-write-handbooks.md)
+## How to write handbook topics?
+
+[👉 How to write handbook?](./how-to-write-handbook.md)
