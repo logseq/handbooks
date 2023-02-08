@@ -105,7 +105,7 @@ All assets files must be placed in the `assets` folder under the corresponding `
 
 ### A final look at the structures of the `docs` directory!
 
-![docs](./images/docs-structures.png)
+![docs](./resources/docs-structures.png)
 
 # 🛠 Set up development mode for previewing in time
 
