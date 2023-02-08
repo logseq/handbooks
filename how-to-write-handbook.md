@@ -111,7 +111,7 @@ All assets files must be placed in the `assets` folder under the corresponding `
 
 #### Infrastructure
 
-The build scripts is powered by Babashka. So you should install it first.
+The build scripts is powered by Babashka. So you should install it first.  
 https://github.com/babashka/babashka#installation
 
 #### Commands
