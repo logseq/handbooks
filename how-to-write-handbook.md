@@ -130,3 +130,9 @@ which will take effect immediately when the master branch has content changes.
 So if you don't want the changes to take effect immediately on the Logseq client,
 you can update the content via Github Pull Request.
 > Online data source: https://handbooks.pages.dev/handbooks.json
+
+#### Videos
+
+<video width="100%" height="auto" controls>
+  <source src="./resources/demo.mp4" type="video/mp4">
+</video>
