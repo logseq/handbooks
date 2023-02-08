@@ -26,12 +26,12 @@ of handbook.
 > which are beneficial for future scalability, and writing experience.
 > https://github.com/edn-format/edn
 
-## Categories
+## Category
 
-The current top-level grouping of Handbook is abstracted through `Categories`,
+The current top-level grouping of Handbook is abstracted through `Category`,
 which are derived from the first level of directories under `docs/*`.
-Each Category folder also corresponds to a configuration file `docs/category/config.edn`,
-which is used to configure the meta information of that `category`.
+Each Category folder also corresponds to a configuration file `docs/your-category-name/config.edn`,
+which is used to configure the meta information of the `category`.
 
 ```clojure
 {:title       "🔆 Onboarding"
@@ -39,18 +39,18 @@ which is used to configure the meta information of that `category`.
  :color       "#dd2624"
 
  ;; [optional] children as topics, if not set this field,
- ;; the children items will be built from topics meta files
+ ;; the children will be built from all topic metafiles under the category folder
  :children    ["1.welcome-to-logseq"
                "2.what-is-outliner"
                "3.the-third-topic"]
  }
 ```
 
-## Topics
+## Topic
 
 Each `Category` is composed of one or more `Topics`,
-and it's also the unit component of Handbook. Currently, you can create a `Topic`
-by creating a `docs/category/xxx-topic-file.edn` metafile in the `Category` folder.
+and it's also the unit component of Handbook. Currently, you can create a `topic`
+by creating a `docs/category/xxx-topic-file.edn` metafile in the `category` folder.
 
 A sample from `docs/1.Onboarding/1.welcome-to-logseq.edn`
 
