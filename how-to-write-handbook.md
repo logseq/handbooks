@@ -4,7 +4,7 @@ The current handbook resources are all stored in the `docs` directory.
 
 ## Root
 
-In the root directory, there is a global configuration file `docs/config.edn` that describes the basic meta information
+In the handbook root directory (`./docs`), there is a global configuration file `docs/config.edn` that describes the basic meta information
 of handbook.
 
 ```clojure
