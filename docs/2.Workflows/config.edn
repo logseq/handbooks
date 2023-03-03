@@ -1,6 +1,6 @@
 {:title       "🐙 Workflows"
  :description "This is sub description"
- :color       "#14a44a"
+ :color       "green"
 
  ;; [optional] if not set, the children topics will be constructed in build time
  ;; :children []

@@ -1,6 +1,6 @@
 {:title       "🔆 Onboarding"
  :description "This is sub description"
- :color       "#dd2624"
+ :color       "red"
 
  ;; children as Topics
  :children    ["1.welcome-to-logseq"
