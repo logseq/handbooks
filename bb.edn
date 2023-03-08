@@ -6,10 +6,14 @@
          markdown-clj/markdown-clj           {:mvn/version "1.11.4"}
          camel-snake-kebab/camel-snake-kebab {:mvn/version "0.4.3"}}
 
- :tasks {dev   {:docs "Auto build docs for development mode!"
+ :tasks {-clean (shell "rm -rf outputs")
+
+         dev   {:depends [-clean]
+                :docs "Auto build docs for development mode!"
                 :task build/start-dev-mode!}
 
-         build {:docs "Build docs for production mode!"
+         build {:depends [-clean]
+                :docs "Build docs for production mode!"
                 :task build/start-prod-mode!}
 
          nrepl (shell "bb nrepl-server 1667")}}

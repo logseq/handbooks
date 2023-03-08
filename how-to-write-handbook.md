@@ -117,7 +117,7 @@ https://github.com/babashka/babashka#installation
 #### Commands
 
 ```bash
-make dev
+bb dev
 ```
 
 This command will listen to the file changes under `docs/*`
