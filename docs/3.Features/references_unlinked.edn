@@ -1,5 +1,5 @@
 {;; [Required] A friendly title for user
- :title       "Linked references"
+ :title       "Unlinked references"
 
  ;; [Optional]
  :description "It's a chapter of a topic"

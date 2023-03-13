@@ -1,0 +1,1 @@
+A feature that allows you to see all the pages that link to the current page using page references. You can access the linked references by scrolling down to the bottom of the page. The linked references will show you the title and a snippet of each page that contains a link to the current page using `[[` syntax. You can click on any linked reference to go to that page.

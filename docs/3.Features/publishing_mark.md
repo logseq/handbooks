@@ -1,0 +1,1 @@
+A feature that allows you to make your notes public and share them with others on your website or GitHub pages. You can mark a page to publish by adding :public true property to it. Only the pages that have this property will be visible to others when you publish your graph.

@@ -1,0 +1,1 @@
+Block references allow you to mention a block from another page or location in your notes. You can create a block reference by typing `((` and selecting the block you want to reference from the autocomplete context menu. The block reference will display the content of the original block and link to it. If you edit the original block, the block reference will update accordingly.

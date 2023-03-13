@@ -13,6 +13,11 @@
  ;; [Optional] a thumb image for topics list
  :cover       "./assets/Properties.png"
 
- ;; :children    ["commands_regular.edn"
- ;;              "commands_advanced.edn"]
+:children    ["properties_add.edn"
+             "properties_icon.edn" 
+             "properties_title.edn"
+             "properties_tags.edn"
+             "properties_template.edn"
+             "properties_alias.edn"
+             "properties_filters.edn"]
  }
