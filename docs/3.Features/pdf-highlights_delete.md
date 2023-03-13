@@ -1,0 +1,1 @@
+This feature allows you to delete any highlight you made on a PDF document by right-clicking on it and selecting “Delete highlight”. If you just delete the corresponding reference block from the `hls_PDF-title-name` file, this will not remove the highlight from the PDF reader.

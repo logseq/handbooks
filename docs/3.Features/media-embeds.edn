@@ -1,0 +1,19 @@
+{;; [Required] A friendly title for user
+ :title       "Media Embeds"
+
+ ;; [Optional]
+ :description "Adding images, videos and audio to your notes"
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;:demos       []
+
+ ;; [Optional] This value will be auto generated from the same name markdown file. `1.welcome-to-logseq.md`
+ ;; :content ""
+
+ ;; [Optional] a thumb image for topics list
+ :cover       "./assets/Media Embeds.png"
+
+:children    ["media-embeds_image.edn"
+              "media-embeds_video.edn"
+              "media-embeds_audio.edn"]
+ }

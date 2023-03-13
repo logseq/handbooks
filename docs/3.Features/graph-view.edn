@@ -1,0 +1,18 @@
+{;; [Required] A friendly title for user
+ :title       "Graph view"
+
+ ;; [Optional]
+ :description "Visualizing your notes and connections in the graph view"
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;:demos       []
+
+ ;; [Optional] This value will be auto generated from the same name markdown file. `1.welcome-to-logseq.md`
+ ;; :content ""
+
+ ;; [Optional] a thumb image for topics list
+ :cover       "./assets/Graph view.png"
+
+:children    ["graph-view_general.edn"
+              "graph-view_page.edn"]
+ }

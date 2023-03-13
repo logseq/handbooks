@@ -1,0 +1,1 @@
+You can copy any highlight you made on a PDF document as plain text. You can then paste the copied text anywhere in your graph and use it as a quote or a summary. Copy highlight text is a useful way to extract information from your highlights with Logseq but it will not link back to the original place in the PDF. 

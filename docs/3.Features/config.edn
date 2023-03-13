@@ -1,2 +1,21 @@
 {:title "🎁 Features"
- :color "#da7706"}
+ :color "#da7706"
+ 
+;; children as Topics
+ :children    ["commands"
+               "embeds"
+               "flashcards"
+               "graph-view"
+               "media-embeds"
+               "pdf-highlights"
+               "plugins"
+               "properties"
+               "publishing"
+               "references"
+               "slides"
+               "tasks"
+               "templates"
+               "themes"
+               "whiteboards"
+               "zotero"]
+ }

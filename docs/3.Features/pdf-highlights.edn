@@ -1,0 +1,22 @@
+{;; [Required] A friendly title for user
+ :title       "PDF Highlights"
+
+ ;; [Optional]
+ :description "Highlighting and annotating PDFs in Logseq"
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;:demos       []
+
+ ;; [Optional] This value will be auto generated from the same name markdown file. `1.welcome-to-logseq.md`
+ ;; :content ""
+
+ ;; [Optional] a thumb image for topics list
+ :cover       "./assets/PDF Highlights.png"
+
+:children    ["pdf-highlights_highlight-text.edn"
+              "pdf-highlights_highlight-area.edn"
+              "pdf-highlights_copy-reference.edn"
+              "pdf-highlights_copy-text.edn"
+              "pdf-highlights_delete.edn"
+              "pdf-highlights_all-highlights.edn"]
+ }

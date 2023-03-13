@@ -1,0 +1,1 @@
+The page graph view allows you to see only the nodes and links related to the current page you are viewing. It helps you focus on a specific topic and explore its connections with other pages in your graph. You can access it by opening the right sidebar and clicking on the "Page Graph" tab at the top.

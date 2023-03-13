@@ -1,0 +1,19 @@
+{;; [Required] A friendly title for user
+ :title       "References"
+
+ ;; [Optional]
+ :description "Understanding block, page, and linked references"
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;:demos       []
+
+ ;; [Optional] This value will be auto generated from the same name markdown file. `1.welcome-to-logseq.md`
+ ;; :content ""
+
+ ;; [Optional] a thumb image for topics list
+ :cover       "./assets/References.png"
+
+:children    ["references_block.edn"
+              "references_page.edn"
+              "references_linked.edn"]
+ }

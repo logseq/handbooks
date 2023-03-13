@@ -1,0 +1,1 @@
+You can see all the highlights you made on a PDF document through a context menu in the top bar. You can access this menu by clicking on the “Outline” button on the top of the PDF reader and switching the tab from “Contents” to “Highlights”. You can also see your highlights in a separate file named `hls_PDF-title-name`, but it might be out of sync. 

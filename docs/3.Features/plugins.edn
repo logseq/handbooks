@@ -1,0 +1,18 @@
+{;; [Required] A friendly title for user
+ :title       "Plugins"
+
+ ;; [Optional]
+ :description "Customizing your workflow with Logseq plugins"
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;:demos       []
+
+ ;; [Optional] This value will be auto generated from the same name markdown file. `1.welcome-to-logseq.md`
+ ;; :content ""
+
+ ;; [Optional] a thumb image for topics list
+ :cover       "./assets/Plugins.png"
+
+:children    ["plugins_install.edn"
+              "plugins_open.edn"]
+ }

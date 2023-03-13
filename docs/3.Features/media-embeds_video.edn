@@ -1,0 +1,9 @@
+{;; [Required] A friendly title for user
+ :title       "Embed video"
+
+ ;; [Optional]
+ :description "It's a chapter of a topic"
+
+ ;; [Optional] Some images or videos to demonstrate features
+ :demos       ["./assets/media-embeds/embed-video.mp4"]
+ }

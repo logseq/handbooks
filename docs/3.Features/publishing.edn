@@ -1,0 +1,18 @@
+{;; [Required] A friendly title for user
+ :title       "Publishing"
+
+ ;; [Optional]
+ :description "Sharing and publishing your notes with others"
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;:demos       []
+
+ ;; [Optional] This value will be auto generated from the same name markdown file. `1.welcome-to-logseq.md`
+ ;; :content ""
+
+ ;; [Optional] a thumb image for topics list
+ :cover       "./assets/Publishing.png"
+
+ ;; :children    ["commands_regular.edn"
+ ;;              "commands_advanced.edn"]
+ }
