@@ -1,0 +1,10 @@
+{
+ ;; [Required] A friendly title for user
+ :title       "Common use cases"
+
+ ;; [Optional]
+ :description "Learn how Logseq can not only help you take better notes, but also to manage your tasks."
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;; :demos       []
+ }

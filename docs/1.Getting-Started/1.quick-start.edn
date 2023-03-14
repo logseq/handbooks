@@ -1,9 +1,9 @@
 {
  ;; [Required] A friendly title for user
- :title       "Start here"
+ :title       "Quick start"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Learn everything you need to know to benefit from Logseq — in less than 5 minutes!"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       []

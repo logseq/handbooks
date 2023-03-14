@@ -1,9 +1,0 @@
-{:title       "🔆 Onboarding"
- :description "This is sub description"
- :color       "#dd2624"
-
- ;; children as Topics
- :children    ["1.start-here"
-               "2.what-is-outliner"
-               "3.the-third-topic"]
- }

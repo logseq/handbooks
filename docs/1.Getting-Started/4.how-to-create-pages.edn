@@ -1,0 +1,10 @@
+{
+ ;; [Required] A friendly title for user
+ :title       "How to create and link pages"
+
+ ;; [Optional]
+ :description "Learn how to create and link pages with just a few keystrokes."
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;; :demos       []
+ }

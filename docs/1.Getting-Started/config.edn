@@ -1,0 +1,10 @@
+{:title       "🔆 Getting Started"
+ :description "New to taking notes in outlines? Start your journey here! "
+ :color       "#dd2624"
+
+ ;; children as Topics
+ :children    ["1.quick-start"
+              "2.what-makes-logseq-different"
+              "3.common-use-cases"
+              "4.how-to-create-pages"]
+ }

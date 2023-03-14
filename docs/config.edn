@@ -5,7 +5,5 @@
  ;; :children []
 
  ;; [optional] popular topics from home
- :popular-topics ["1.Onboarding/1.start-here"
-                  "1.Onboarding/2.what-is-outliner"
-                  "2.Workflows/1.get-start"]
+ :popular-topics ["1.Getting-Started/1.quick-start"]
  }
