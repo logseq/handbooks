@@ -21,8 +21,8 @@
 (when-not (fs/exists? OUTPUTS_ROOT)
   (fs/create-dir OUTPUTS_ROOT))
 
-(defn- resolve-docs-file-or-dirs!
-  ([filepath] (resolve-docs-file-or-dirs! filepath false))
+(defn- resolve-content!
+  ([filepath] (resolve-content! filepath false))
   ([filepath create-if-not-exist?]
    (let [f    (fs/real-path
                 (if (string? filepath)
@@ -69,6 +69,11 @@
             (seq (:demos category))
             (assoc :demos (assets-fn! (:demos category))))))
 
+(defn- assets-dir?
+  [f]
+  (when (and f (fs/directory? f))
+    (= (fs/file-name f) "assets")))
+
 (defn- ensure-output-assets-dir!
   []
   (let [f (fs/path OUTPUTS_ROOT "assets")]
@@ -95,13 +100,13 @@
                             (fs/path root-or-fullpath? (if ext? k (str k ".edn"))))]
                  (if-not (fs/exists? f)
                    (println "❌Error: topic file not exists! " f)
-                   (let [config       (resolve-docs-file-or-dirs! f)
+                   (let [config       (resolve-content! f)
                          content-file (fs/file (string/replace-first (.toString f) #".edn$" ".md"))]
                      [f (-> (cond-> config
 
                                     (and (nil? (:content config))
                                          (fs/exists? content-file))
-                                    (assoc :content (resolve-docs-file-or-dirs! content-file)))
+                                    (assoc :content (resolve-content! content-file)))
 
                             (assoc :key (-> (str parent-key "/" (fs/file-name (fs/strip-ext content-file)))
                                             (string/lower-case)
@@ -109,44 +114,52 @@
              children)
         (remove nil?))))
 
-(defn- build-nodes [nodes output]
+(defn- build-nodes [prefix nodes output]
   (->> nodes
-       (map (fn [f]
-              (let [items$ (resolve-docs-file-or-dirs! f)
-                    items  (filterv #(string/ends-with? (.toString %) ".edn") items$)]
+       (map (fn [node-f]
+              (let [items$        (resolve-content! node-f)
+                    output        (try (resolve-content! (fs/path node-f "config.edn"))
+                                       (catch Exception _ {}))
+                    children      (filterv #(string/ends-with? (.toString %) ".edn") items$)
+                    children-more (filterv #(and (fs/directory? %) (not (assets-dir? %))) items$)]
 
                 ;; build a category
                 (let [metafile-fn? (fn [pred] #(filterv (fn [f] (pred (fs/file-name f) "config.edn")) %))
-                      [metafile children] ((juxt (metafile-fn? =) (metafile-fn? not=)) items)]
+                      [metafile children] ((juxt (metafile-fn? =) (metafile-fn? not=)) children)]
                   (when-let [node (or (some-> (first metafile)
-                                              (resolve-docs-file-or-dirs!))
-                                      {:title (fs/file-name f)})]
-                    (let [node-k    (csk/->snake_case_string
-                                      (string/lower-case (fs/file-name f)))
+                                              (resolve-content!))
+                                      {:title (fs/file-name node-f)})]
+                    (let [node-k    (-> (str prefix "/" (fs/file-name node-f))
+                                        (string/lower-case)
+                                        (csk/->snake_case_string)
+                                        (string/replace #"^[\/_]+" ""))
                           node      (assoc node :key node-k)
                           children' (:children node)]
 
-                      ;; resolve category children (topics)
+                      ;; resolve file children (topics)
                       (->> (if-not (nil? children')
-                             (resolve-children f node-k children')
+                             (resolve-children node-f node-k children')
                              (resolve-children node-k children))
 
-                           ;; resolve topic children (chapters)
+                           ;; resolve node children (chapters)
                            (map (fn [[f' t]]
                                   (if-let [children (:children t)]
                                     (->> (resolve-children (fs/parent f') (:key t) children)
                                          (map second)
                                          (assoc t :children))
                                     t)))
+
+                           ;; resolve more children
+                           (concat (:children (build-nodes node-k children-more output)))
                            (assoc node :children))))))))
        (assoc output :children)))
 
 (defn- build-docs!
   ([] (build-docs! false true))
   ([dev-mode? build-assets?]
-   (let [output     (resolve-docs-file-or-dirs! "./config.edn")
-         categories (sort (filterv fs/directory? (resolve-docs-file-or-dirs! ".")))]
-     (let [results (build-nodes categories output)
+   (let [output     (resolve-content! "./config.edn")
+         categories (sort (filterv fs/directory? (resolve-content! ".")))]
+     (let [results (build-nodes "" categories output)
            results (assoc results :version (.toString (LocalDateTime/now)))]
 
        ;; save assets
