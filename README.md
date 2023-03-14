@@ -26,7 +26,7 @@ of handbook.
 > which are beneficial for future scalability, and writing experience.
 > https://github.com/edn-format/edn
 
-## Category
+## Categories
 
 The current top-level grouping of Handbook is abstracted through `Category`,
 which are derived from the first level of directories under `docs/*`.
@@ -46,7 +46,7 @@ which is used to configure the meta information of the `category`.
  }
 ```
 
-## Topic
+## Topics
 
 Each `Category` is composed of one or more `Topics`, and it's also the unit component of Handbook. Currently, you can create a `topic` by creating a `docs/category/xxx-topic-file.edn` metadata file in the `category` folder.
 
@@ -107,9 +107,7 @@ All assets files must be placed in the `assets` folder under the corresponding `
 
 # 🛠 Set up development mode for previewing in time
 
-#### Infrastructure
-
-**Setup instructions**
+## Setup instructions
 1. Clone the Handbooks repo to your local machine
 2. Download and open the Handbook Logseq build and enable the developer feature in settings. A Handbook icon appears above the help button (bottom right)
 3. Click the Handbook icon and then the great icon in the top right. Set the toggle **on** for **Writing mode**
@@ -117,7 +115,7 @@ All assets files must be placed in the `assets` folder under the corresponding `
   - For this step to run, you need to have all dependencies installed: [Java](https://www.java.com/en/) and [Babashka](https://github.com/babashka/babashka#installation)
 5. Edit the Handbook files using VS Code. Any changes you save will automatically show in the Handbook within Logseq (make sure you have writing mode enabled in the Handbook's settings)
 
-#### Commands
+## Commands
 
 ```bash
 bb dev
@@ -126,15 +124,16 @@ bb dev
 This command will listen to the file changes under `docs/*`
 and build the handbook data to be used by the client.
 
-#### ⚠️ How to publish updates to user?
+# ⚠️ How to publish updates to user?
 
 The project has been configured with Github CI to deploy the latest updates,
 which will take effect immediately when the master branch has content changes.
 So if you don't want the changes to take effect immediately on the Logseq client,
 you can update the content via Github Pull Request.
+
 > Online data source: https://handbooks.pages.dev/handbooks.json
 
-#### Videos
+## Videos
 
 ref link: [🔗 A video to show how to write docs](https://github.com/logseq/handbooks/issues/1)
 
