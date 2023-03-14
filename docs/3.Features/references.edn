@@ -15,5 +15,6 @@
 
 :children    ["references_block.edn"
               "references_page.edn"
-              "references_linked.edn"]
+              "references_linked.edn"
+              "references_unlinked.edn"]
  }

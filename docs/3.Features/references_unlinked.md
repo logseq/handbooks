@@ -1,11 +1,1 @@
-{;; [Required] A friendly title for user
- :title       "Linked references"
-
- ;; [Optional]
- :description "It's a chapter of a topic"
-
- ;; [Optional] Some images or videos to demonstrate features
- ;; :demos       ["./assets/x.mp4"
- ;;              "https://www.youtube.com/watch?v=uig8_3kqhjY"
-;;               "./assets/demo.png"]
- }
+A feature that allows you to see all the pages that mention the current page without linking to it. You can access the unlinked references by clicking on the “Unlinked References” button at the bottom of the page. The unlinked references will show you the title and a snippet of each page that contains a mention of the current page without using `[[` syntax. You can edit any unlinked reference directly on the page and add brackets around it to turn it into a linked reference.

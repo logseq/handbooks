@@ -1,0 +1,11 @@
+{;; [Required] A friendly title for user
+ :title       "Set up Zotero connection"
+
+ ;; [Optional]
+ :description "It's a chapter of a topic"
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;; :demos       ["./assets/x.mp4"
+ ;;              "https://www.youtube.com/watch?v=uig8_3kqhjY"
+;;               "./assets/demo.png"]
+ }

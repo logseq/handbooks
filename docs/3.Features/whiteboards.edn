@@ -13,6 +13,9 @@
  ;; [Optional] a thumb image for topics list
  :cover       "./assets/Whiteboards.png"
 
- ;; :children    ["commands_regular.edn"
- ;;              "commands_advanced.edn"]
+:children    ["whiteboards_create.edn"
+              "whiteboards_name.edn"
+              "whiteboards_use-tools.edn"
+              "whiteboards_create-embed-block.edn"
+              "whiteboards_create-embed-page.edn"]
  }

@@ -13,6 +13,7 @@
  ;; [Optional] a thumb image for topics list
  :cover       "./assets/Tasks.png"
 
- ;; :children    ["commands_regular.edn"
- ;;              "commands_advanced.edn"]
+:children    ["tasks_create.edn"
+              "tasks_schedule.edn"
+              "tasks_prioritize.edn"]
  }

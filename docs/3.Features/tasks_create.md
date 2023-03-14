@@ -1,0 +1,1 @@
+Easily turn any block of text into a todo item by typing `TODO` at the beginning, selecting it from the `/`-command menu, or using the keyboard shortcut `CMD+Enter`. You can also cycle through the states of your tasks with `CMD+Enter`, such as `NOW` , `DOING` or `DONE`. Logseq helps you organize and manage your tasks across your notes and projects.

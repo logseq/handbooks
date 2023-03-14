@@ -1,0 +1,1 @@
+Insert any template that you have created into your notes. Just type /template and select the template you want from the autocomplete list. The template will be added to your current block. This will help you quickly fill in your notes with predefined structures and content.

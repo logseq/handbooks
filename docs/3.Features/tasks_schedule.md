@@ -1,0 +1,1 @@
+Set a date and time for your tasks by typing `SCHEDULED: <date>` at the end of the block or using commands (`/schedule`, `/now`, `/later`, `/deadline`). You can also use queries to see your scheduled tasks on any day page. Logseq helps you plan ahead and stay on track with your deadlines.

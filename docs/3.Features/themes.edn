@@ -13,6 +13,7 @@
  ;; [Optional] a thumb image for topics list
  :cover       "./assets/Themes.png"
 
- ;; :children    ["commands_regular.edn"
- ;;              "commands_advanced.edn"]
+:children    ["themes_install.edn"
+              "themes_select.edn"
+              "themes_toggle-dark-light.edn"]
  }

@@ -1,0 +1,1 @@
+Switch between different themes that you have installed or that come with Logseq. To select a theme, click on the three dots menu in the top bar and select Themes. This will open a list of all available themes. Click on a theme to apply it to your notes. This will help you change the appearance of your notes according to your mood or preference.

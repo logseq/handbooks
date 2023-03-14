@@ -13,6 +13,6 @@
  ;; [Optional] a thumb image for topics list
  :cover       "./assets/Slides.png"
 
- ;; :children    ["commands_regular.edn"
- ;;              "commands_advanced.edn"]
+:children    ["slides_create.edn"
+              "slides_bg-image.edn"]
  }
