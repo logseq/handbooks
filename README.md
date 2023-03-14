@@ -48,9 +48,7 @@ which is used to configure the meta information of the `category`.
 
 ## Topic
 
-Each `Category` is composed of one or more `Topics`,
-and it's also the unit component of Handbook. Currently, you can create a `topic`
-by creating a `docs/category/xxx-topic-file.edn` metafile in the `category` folder.
+Each `Category` is composed of one or more `Topics`, and it's also the unit component of Handbook. Currently, you can create a `topic` by creating a `docs/category/xxx-topic-file.edn` metadata file in the `category` folder.
 
 A sample from `docs/1.Onboarding/1.welcome-to-logseq.edn`
 
@@ -111,8 +109,13 @@ All assets files must be placed in the `assets` folder under the corresponding `
 
 #### Infrastructure
 
-The build scripts is powered by Babashka. So you should install it first.  
-https://github.com/babashka/babashka#installation
+**Setup instructions**
+1. Clone the Handbooks repo to your local machine
+2. Download and open the Handbook Logseq build and enable the developer feature in settings. A Handbook icon appears above the help button (bottom right)
+3. Click the Handbook icon and then the great icon in the top right. Set the toggle **on** for **Writing mode**
+4. Open the Terminal and go to the directory where you cloned the Handbooks repo. Run the command `bb dev`
+  - For this step to run, you need to have all dependencies installed: [Java](https://www.java.com/en/) and [Babashka](https://github.com/babashka/babashka#installation)
+5. Edit the Handbook files using VS Code. Any changes you save will automatically show in the Handbook within Logseq (make sure you have writing mode enabled in the Handbook's settings)
 
 #### Commands
 
