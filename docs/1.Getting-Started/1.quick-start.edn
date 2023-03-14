@@ -1,0 +1,10 @@
+{
+ ;; [Required] A friendly title for user
+ :title       "Quick start"
+
+ ;; [Optional]
+ :description "Learn everything you need to know to benefit from Logseq — in less than 5 minutes!"
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;; :demos       []
+ }
