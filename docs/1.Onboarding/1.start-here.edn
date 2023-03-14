@@ -1,0 +1,10 @@
+{
+ ;; [Required] A friendly title for user
+ :title       "Start here"
+
+ ;; [Optional]
+ :description "It's a chapter of a topic"
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;; :demos       []
+ }
