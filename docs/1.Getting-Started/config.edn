@@ -4,7 +4,6 @@
 
  ;; children as Topics
  :children    ["1.quick-start"
-              "2.what-makes-logseq-different"
-              "3.common-use-cases"
-              "4.how-to-create-pages"]
+              "2.common-use-cases"
+              "3.how-to-create-pages"]
  }
