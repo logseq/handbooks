@@ -1,0 +1,10 @@
+{
+ ;; [Required] A friendly title for user
+ :title       "Getting started with Journals"
+
+ ;; [Optional]
+ ;; :description ""
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;; :demos       []
+ }
