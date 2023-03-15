@@ -2,7 +2,7 @@
  :title       "Schedule task"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Assign tasks to specific dates"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

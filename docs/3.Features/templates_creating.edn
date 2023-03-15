@@ -2,7 +2,7 @@
  :title       "Create template"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Save content as a template for future use"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

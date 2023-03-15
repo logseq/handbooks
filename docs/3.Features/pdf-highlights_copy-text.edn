@@ -2,7 +2,7 @@
  :title       "Copy highlight text"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Copy and paste highlighted text"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

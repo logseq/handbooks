@@ -2,7 +2,7 @@
  :title       "Page embeds"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Embed pages in your notes"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

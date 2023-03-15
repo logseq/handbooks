@@ -2,7 +2,7 @@
  :title       "Name whiteboard"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Give a name to your whiteboard"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

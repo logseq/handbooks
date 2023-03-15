@@ -2,7 +2,7 @@
  :title       "Create cloze"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Create cloze cards to memorize information"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

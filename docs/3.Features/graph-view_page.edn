@@ -2,7 +2,7 @@
  :title       "Page graph view"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Visualize connections to your current pages"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

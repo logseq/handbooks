@@ -1,11 +1,1 @@
-{;; [Required] A friendly title for user
- :title       "Icon property"
-
- ;; [Optional]
- :description "It's a chapter of a topic"
-
- ;; [Optional] Some images or videos to demonstrate features
- ;; :demos       ["./assets/x.mp4"
- ;;              "https://www.youtube.com/watch?v=uig8_3kqhjY"
-;;               "./assets/demo.png"]
- }
+With Logseq, you can customize any page in your notes with an icon that represents its content or purpose. An icon is a small symbol that you can add by typing `icon::` followed by an emoji code or an image URL. For example, you can use `📚` as an icon for a page where you collect your reading notes and see it next to the page title in the sidebar and the page view. Icons help you make your notes more expressive and memorable.

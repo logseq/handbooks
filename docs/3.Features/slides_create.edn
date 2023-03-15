@@ -2,7 +2,7 @@
  :title       "Create presentation"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Present your notes with ease"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

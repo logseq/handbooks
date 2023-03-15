@@ -2,7 +2,7 @@
  :title       "Embed images"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Add images to your notes"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

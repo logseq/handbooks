@@ -2,7 +2,7 @@
  :title       "Unlinked references"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Identify potential links to your current page"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

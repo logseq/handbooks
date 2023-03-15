@@ -2,7 +2,7 @@
  :title       "Search Zotero items"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Find and add Zotero items to your notes"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

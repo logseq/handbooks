@@ -2,7 +2,7 @@
  :title       "Embed video"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Add videos to your notes"
 
  ;; [Optional] Some images or videos to demonstrate features
  :demos       ["./assets/media-embeds/embed-video.mp4"]

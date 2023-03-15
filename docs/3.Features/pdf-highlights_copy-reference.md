@@ -1,1 +1,1 @@
-You can copy any highlight you made on a PDF document as a block reference. You can then paste the copied reference anywhere in your graph and use it as a link to the original PDF. Copy highlight reference is a handy way to connect your highlights with your other notes in Logseq.
+You can copy any highlight you made on a PDF document as a block reference. You can then paste the copied reference anywhere in your graph and use it as a link to the original PDF. Doing that is a handy way to connect the original source of your highlights with notes about them.

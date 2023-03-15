@@ -2,7 +2,7 @@
  :title       "Icon property"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Add icons to pages for visual distinction"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

@@ -2,7 +2,7 @@
  :title       "Add background image"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Customize your slides with background images"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

@@ -2,7 +2,7 @@
  :title       "See all highlights of PDF"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Quickly access a highlight overview"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

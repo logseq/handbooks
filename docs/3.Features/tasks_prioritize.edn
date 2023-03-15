@@ -2,7 +2,7 @@
  :title       "Prioritize task"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Organize tasks by priority"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

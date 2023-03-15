@@ -2,7 +2,7 @@
  :title       "Publish graph"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Share your graph with others"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

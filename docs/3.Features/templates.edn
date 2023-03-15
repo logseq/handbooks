@@ -13,6 +13,6 @@
  ;; [Optional] a thumb image for topics list
  :cover       "./assets/Templates.png"
 
- ;; :children    ["commands_regular.edn"
- ;;              "commands_advanced.edn"]
+:children    ["templates_creating.edn"
+              "templates_using.edn"]
  }

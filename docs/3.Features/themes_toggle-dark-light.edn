@@ -2,7 +2,7 @@
  :title       "Toggle dark/light theme"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Switch between dark and light themes"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

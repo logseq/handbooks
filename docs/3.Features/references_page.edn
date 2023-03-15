@@ -2,7 +2,7 @@
  :title       "Page references"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Link to any pages you've created"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

@@ -2,7 +2,7 @@
  :title       "Create and embed pages"
 
  ;; [Optional]
- :description "It's a chapter of a topic"
+ :description "Place pages on your whiteboard"
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       ["./assets/x.mp4"

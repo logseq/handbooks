@@ -1,4 +1,4 @@
-Logseq lets you draw on your whiteboard with different tools that suit your needs. You can access the tools from the toolbar on the right side of the canvas. The tools include:
+Draw on your whiteboard with different tools that suit your needs. You can access the tools from the toolbar on the right side of the canvas. The tools include:
 
 - Select: Select elements on the canvas and manipulate their properties or actions.
 - Move: Move around the canvas by dragging it.
