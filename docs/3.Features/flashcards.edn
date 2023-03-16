@@ -14,6 +14,5 @@
  :cover       "./assets/Flashcards.png"
 
  :children    ["flashcards_create-card.edn"
-               "flashcards_create-cloze.edn"
                "flashcards_review-cards.edn"]
  }

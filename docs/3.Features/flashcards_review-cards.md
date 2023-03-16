@@ -1,1 +1,13 @@
-You can test your memory and recall of the information you have stored in your Logseq notes by reviewing flashcards. You can access the flashcards you’ve created so far by clicking on the `Flashcards` tab in the left sidebar. A modal overlay will open that shows you one flashcard at a time. You can click on `Show answer` to reveal the answer behind the `::` or click on `Next` to move to the next flashcard. The flashcards are ordered based on your last review of them, so that you see the ones that you are most likely to forget first. You can also click on `Reset` to start over from the beginning. If you review your flashcards regularly it helps you improve your retention and learning efficiency.
+Regularly reviewing your flashcards helps you to remember more from what you put into Logseq.
+
+To review your flashcards, click the `Flashcards` button in the left sidebar. This open an overlay, showing you one flashcard at a time.
+
+Click on `Show answer` or use the keyboard shortcut `s` to reveal the answer.
+
+**TK ADD GIF WITH DEMO**
+
+The flashcards are ordered based on your last review of them, so that you see the ones that you are most likely to forget first. To train the algorithm, score yourself based on the effort it took to answer the question on the front of the flashcard:
+
+**TK ADD SCREENSHOT WITH SCORING OPTIONS**
+
+As with many options in Logseq, you can score yourself by pressing the keyboard shortcut mentioned on the button.
