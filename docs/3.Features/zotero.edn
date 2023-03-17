@@ -13,6 +13,6 @@
  ;; [Optional] a thumb image for topics list
  :cover       "./assets/Zotero.png"
 
- ;; :children    ["commands_regular.edn"
- ;;              "commands_advanced.edn"]
+:children    ["zotero_search-items.edn"
+              "zotero_setup.edn"]
  }
