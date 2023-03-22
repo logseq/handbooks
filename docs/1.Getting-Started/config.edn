@@ -3,7 +3,9 @@
  :color       "#dd2624"
 
  ;; children as Topics
- :children    ["1.quick-start"
-              "2.common-use-cases"
-              "3.how-to-create-pages"]
+ :children    ["1.welcome-to-logseq"
+              "2.overview-of-logseqs-interface"
+              "3.getting-started-with-journals"
+              "4.how-to-create-pages"
+              "5.common-use-cases"]
  }
