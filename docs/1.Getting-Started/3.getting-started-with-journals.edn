@@ -3,7 +3,7 @@
  :title       "Getting started with Journals"
 
  ;; [Optional]
- ;; :description ""
+:description "Dump your thoughts and easily find them back using the Journals."
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       []

@@ -3,7 +3,7 @@
  :title       "Overview of Logseq's interface"
 
  ;; [Optional]
- ;; :description ""
+:description "See how Logseq's building blocks fit together."
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       []

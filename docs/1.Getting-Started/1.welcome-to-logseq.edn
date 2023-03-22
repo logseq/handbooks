@@ -3,7 +3,7 @@
  :title       "Welcome to Logseq"
 
  ;; [Optional]
- ;; :description ""
+:description "Why you should use Logseq and how to get started quickly."
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       []
