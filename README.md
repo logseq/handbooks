@@ -104,7 +104,7 @@ All assets files must be placed in the `assets` folder under the corresponding `
 ### How to directly open a topic through an external link?
 
 At present, it is supported to open the specified topic directly 
-through the logseq schema link like `logseq://handbook/{a-topic-fullpath-key}`.  
+through the logseq scheme link like `logseq://handbook/{a-topic-fullpath-key}`.  
 
 > ↪️ You can quickly get this link in this way.  [e.g. Handbook/Regular commands](logseq://handbook/3.features/commands)    
 
