@@ -107,7 +107,8 @@ At present, it is supported to open the specified topic directly
 through the logseq schema link like `logseq://handbook/{a-topic-fullpath-key}`.  
 
 > ↪️ You can quickly get this link in this way.  [e.g. Handbook/Regular commands](logseq://handbook/3.features/commands)    
-> ![copy-pane-link.png](resources%2Fcopy-pane-link.png)
+
+![copy-pane-link.png](resources%2Fcopy-pane-link.png)
 
 ### A final look at the structures of the `docs` directory!
 
