@@ -8,3 +8,6 @@ nrepl:
 
 clean:
 	rm -rf outputs
+
+dev:
+	bb dev
