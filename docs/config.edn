@@ -5,5 +5,5 @@
  ;; :children []
 
  ;; [optional] popular topics from home
- :popular-topics ["1.Getting-Started/1.quick-start"]
+ :popular-topics ["1.Getting-Started/1.welcome-to-logseq"]
  }
