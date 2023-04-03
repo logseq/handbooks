@@ -1,11 +1,12 @@
-{:title       "🔆 Getting Started"
+{:title       "Getting Started"
  :description "New to taking notes in outlines? Start your journey here! "
  :color       "#dd2624"
+ :icon        "eyeglass"
 
  ;; children as Topics
  :children    ["1.welcome-to-logseq"
-              "2.overview-of-logseqs-interface"
-              "3.getting-started-with-journals"
-              "4.how-to-create-pages"
-              "5.common-use-cases"]
+               "2.overview-of-logseqs-interface"
+               "3.getting-started-with-journals"
+               "4.how-to-create-pages"
+               "5.common-use-cases"]
  }

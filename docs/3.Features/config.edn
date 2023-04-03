@@ -1,5 +1,6 @@
-{:title "🎁 Features"
+{:title "Features"
  :color "#da7706"
+ :icon "sparkles"
  
 ;; children as Topics
  :children    ["commands"

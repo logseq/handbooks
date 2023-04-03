@@ -1,6 +1,7 @@
-{:title       "🐙 Workflows"
+{:title       "Workflows"
  :description "This is sub description"
  :color       "#14a44a"
+ :icon        "seeding"
 
  ;; [optional] if not set, the children topics will be constructed in build time
  ;; :children []
