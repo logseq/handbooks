@@ -1,22 +1,22 @@
-{:title "Features"
- :color "#da7706"
- :icon "sparkles"
- 
-;; children as Topics
- :children    ["commands"
-               "embeds"
-               "flashcards"
-               "graph-view"
-               "media-embeds"
-               "pdf-highlights"
-               "plugins"
-               "properties"
-               "publishing"
-               "references"
-               "slides"
-               "tasks"
-               "templates"
-               "themes"
-               "whiteboards"
-               "zotero"]
+{:title    "Features"
+ :color    "#da7706"
+ :icon     "wand"
+
+ ;; children as Topics
+ :children ["commands"
+            "embeds"
+            "flashcards"
+            "graph-view"
+            "media-embeds"
+            "pdf-highlights"
+            "plugins"
+            "properties"
+            "publishing"
+            "references"
+            "slides"
+            "tasks"
+            "templates"
+            "themes"
+            "whiteboards"
+            "zotero"]
  }
