@@ -7,4 +7,7 @@
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       []
+
+ :cover       "./assets/Use cases.png"
+
  }

@@ -3,8 +3,11 @@
  :title       "Overview of Logseq's interface"
 
  ;; [Optional]
-:description "See how Logseq's building blocks fit together."
+ :description "See how Logseq's building blocks fit together."
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       []
+
+ :cover       "./assets/Interface.png"
  }
+ 
