@@ -1,0 +1,13 @@
+{
+ ;; [Required] A friendly title for user
+ :title       "Logseq Sync storage limitations"
+
+ ;; [Optional]
+ :description "See how many remote graphs you can have and how much you can store in each."
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;; :demos       []
+
+ ;; :cover       "./assets/Welcome.png"
+ }
+ 

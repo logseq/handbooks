@@ -1,0 +1,13 @@
+{
+ ;; [Required] A friendly title for user
+ :title       "How to open an existing remote graph on mobile"
+
+ ;; [Optional]
+ :description "Learn how to sync a remote graph to your mobile device, and what to take into consideration."
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;; :demos       []
+
+ ;; :cover       "./assets/Welcome.png"
+ }
+ 
