@@ -1,0 +1,11 @@
+{:title       "Sync"
+ :description "Everything you need to know to sync your graph across your devices using the official Logseq Sync service."
+ :color       "#dd2624"
+ :icon        "refresh"
+
+ ;; children as Topics
+ :children    ["1.how-to-enable-sync"
+               "2.how-to-create-remote-graph"
+               "3.how-to-ensure-your-notes-are-synced"
+               "4.how-to-switch-between-remote-graphs"]
+ }

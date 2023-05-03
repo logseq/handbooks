@@ -1,0 +1,13 @@
+{
+ ;; [Required] A friendly title for user
+ :title       "How to ensure your notes are synced"
+
+ ;; [Optional]
+ :description "Logseq automatically syncs your notes, but learn here how to force a sync and check if all new changes have been synced."
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;; :demos       []
+
+ ;; :cover       "./assets/Welcome.png"
+ }
+ 

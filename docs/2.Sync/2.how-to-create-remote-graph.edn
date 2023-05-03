@@ -1,0 +1,13 @@
+{
+ ;; [Required] A friendly title for user
+ :title       "How to create a remote (synced) graph"
+
+ ;; [Optional]
+ :description "Learn how to setup a new remote graph to easily sync your notes between your devices."
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;; :demos       []
+
+ ;; :cover       "./assets/Welcome.png"
+ }
+ 

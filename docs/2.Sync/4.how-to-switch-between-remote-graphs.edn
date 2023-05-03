@@ -1,0 +1,13 @@
+{
+ ;; [Required] A friendly title for user
+ :title       "How to switch between (remote) graphs"
+
+ ;; [Optional]
+ :description "Learn how to easily switch between graph, whether they're remote or local."
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;; :demos       []
+
+ ;; :cover       "./assets/Welcome.png"
+ }
+ 

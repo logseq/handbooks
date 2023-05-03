@@ -2,7 +2,7 @@
  :title       "Commands"
 
  ;; [Optional]
- :description "Learn how to use Logseq's command palette"
+ :description "Learn how to use Logseq's commands to quickly enrich your notes."
 
  ;; [Optional] Some images or videos to demonstrate features
  ;:demos       []
