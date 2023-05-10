@@ -119,7 +119,7 @@ through the logseq scheme link like `logseq://handbook/{a-topic-fullpath-key}`.
 ## Setup instructions
 1. Clone the Handbooks repo to your local machine
 2. Download and open the Handbook Logseq build and enable the developer feature in settings. A Handbook icon appears above the help button (bottom right)
-3. Click the Handbook icon and then the great icon in the top right. Set the toggle **on** for **Writing mode**
+3. Click the Handbook icon and then the gear icon (⚙️) in the top right. Set the toggle **on** for **Writing mode**
 4. Open the Terminal and go to the directory where you cloned the Handbooks repo. Run the command `bb dev`
   - For this step to run, you need to have all dependencies installed: [Java](https://www.java.com/en/) and [Babashka](https://github.com/babashka/babashka#installation)
 5. Edit the Handbook files using VS Code. Any changes you save will automatically show in the Handbook within Logseq (make sure you have writing mode enabled in the Handbook's settings)
