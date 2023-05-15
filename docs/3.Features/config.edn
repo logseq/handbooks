@@ -1,6 +1,6 @@
 {:title    "Features"
  :color    "#da7706"
- :icon     "wand"
+ :icon     "app-feature"
 
  ;; children as Topics
  :children ["commands"
