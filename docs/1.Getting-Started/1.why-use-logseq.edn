@@ -1,0 +1,13 @@
+{
+ ;; [Required] A friendly title for user
+ :title       "Why use Logseq?"
+
+ ;; [Optional]
+ :description "Why use Logseq and how to get started quickly."
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;; :demos       []
+
+ :cover       "./assets/Welcome.png"
+ }
+ 

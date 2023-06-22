@@ -1,0 +1,13 @@
+{
+ ;; [Required] A friendly title for user
+ :title       "The only things you need to get started"
+
+ ;; [Optional]
+ :description "brief look at Logseq’s core features: block and branches, journals and pages, page and block references."
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;; :demos       []
+
+ :cover       "./assets/Interface.png"
+ }
+ 
