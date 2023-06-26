@@ -1,7 +1,7 @@
 {:title       "Sync"
  :description "Everything you need to know to sync your graph across your devices using the official Logseq Sync service."
- :color       "#14a44a"
  :icon        "refresh"
+ :color       "#da7706"
 
  ;; children as Topics
  :children    ["1.how-to-enable-sync"
