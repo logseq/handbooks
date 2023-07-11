@@ -1,0 +1,13 @@
+{
+ ;; [Required] A friendly title for user
+ :title       "Fundamental 1: Write in blocks and branches"
+
+ ;; [Optional]
+ :description "Logseq is an outliner, and one of the fundamental ways to organize your notes is by grouping blocks in branches."
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;; :demos       []
+
+ :cover       "./assets/Branching.png"
+ }
+ 
