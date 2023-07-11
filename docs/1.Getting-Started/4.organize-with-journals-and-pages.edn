@@ -1,0 +1,13 @@
+{
+ ;; [Required] A friendly title for user
+ :title       "Fundamental 2: Organize with journals and pages"
+
+ ;; [Optional]
+ :description "In Logseq, you don't organize notes in folders. Instead, you group related branches in pages."
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;; :demos       []
+
+ :cover       "./assets/Journals.png"
+ }
+

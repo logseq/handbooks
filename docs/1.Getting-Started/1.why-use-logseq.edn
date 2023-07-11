@@ -1,6 +1,6 @@
 {
  ;; [Required] A friendly title for user
- :title       "Why use Logseq?"
+ :title       "Why use Logseq to take notes?"
 
  ;; [Optional]
  :description "Why use Logseq and how to get started quickly."
