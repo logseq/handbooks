@@ -1,0 +1,13 @@
+{
+ ;; [Required] A friendly title for user
+ :title       "Fundamental 3: Link your notes with page and block references"
+
+ ;; [Optional]
+ :description "In Logseq, it does not matter where you keep your notes because you can easily link to any page or block."
+
+ ;; [Optional] Some images or videos to demonstrate features
+ ;; :demos       []
+
+ :cover       "./assets/Journals.png"
+ }
+

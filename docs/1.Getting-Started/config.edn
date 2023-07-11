@@ -7,5 +7,6 @@
  :children    ["1.why-use-logseq"
                "2.the-only-features-you-need-to-start"
                "3.write-in-blocks-and-branches"
-               "4.organize-with-journals-and-pages"]
+               "4.organize-with-journals-and-pages"
+               "5.link-your-notes-with-page-and-block-references"]
  }
