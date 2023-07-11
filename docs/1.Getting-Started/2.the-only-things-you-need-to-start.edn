@@ -1,9 +1,9 @@
 {
  ;; [Required] A friendly title for user
- :title       "The only things you need to get started"
+ :title       "The only features you need to get started with Logseq"
 
  ;; [Optional]
- :description "brief look at Logseq’s core features: block and branches, journals and pages, page and block references."
+ :description "A brief look at Logseq’s core features: blocks, pages, and references."
 
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       []
