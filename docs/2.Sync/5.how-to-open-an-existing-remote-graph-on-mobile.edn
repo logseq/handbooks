@@ -8,6 +8,6 @@
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       []
 
- ;; :cover       "./assets/Welcome.png"
+ :cover       "./assets/Mobile graph.png"
  }
  
