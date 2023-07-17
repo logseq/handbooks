@@ -8,6 +8,6 @@
  ;; [Optional] Some images or videos to demonstrate features
  ;; :demos       []
 
- :cover       "./assets/Journals.png"
+ :cover       "./assets/Linking.png"
  }
 
