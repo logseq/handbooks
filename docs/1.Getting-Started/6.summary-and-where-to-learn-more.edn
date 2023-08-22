@@ -1,6 +1,6 @@
 {
  ;; [Required] A friendly title for user
- :title       "Onboarding recap and where to learn more"
+ :title       "Summary and where to learn more"
 
  ;; [Optional]
  :description "A one-page summary with all the important points from the onboarding series, plus information on where to learn more about Logseq for specific use cases."
