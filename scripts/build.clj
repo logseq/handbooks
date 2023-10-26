@@ -157,8 +157,12 @@
 (defn- build-docs!
   ([] (build-docs! false true))
   ([dev-mode? build-assets?]
-   (let [output     (resolve-content! "./config.edn")
-         categories (sort (filterv fs/directory? (resolve-content! ".")))]
+   (let [output (resolve-content! "./config.edn")
+         user-categories (seq (:children output))
+         categories (sort (filterv fs/directory?
+                                   (if user-categories
+                                     (map #(fs/path DOCS_ROOT %) user-categories)
+                                     (resolve-content! "."))))]
      (let [results (build-nodes "" categories output)
            results (assoc results :version (.toString (LocalDateTime/now)))]
 

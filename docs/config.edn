@@ -1,9 +1,8 @@
 {:title          "Logseq Handbook"
  :version        "0.0.1"
 
- ;; [optional] Currently, the children items will be constructed in build time
-:children ["1.Getting-Started"
-          "2.Sync"]
+ ;; [optional] As default, the children items will be constructed in build time
+ ;:children []
 
  ;; [optional] popular topics from home
  :popular-topics ["1.Getting-Started/2.the-only-features-you-need-to-start"
