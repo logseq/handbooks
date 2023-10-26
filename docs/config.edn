@@ -2,7 +2,8 @@
  :version        "0.0.1"
 
  ;; [optional] Currently, the children items will be constructed in build time
- ;; :children []
+:children ["1.Getting-Started"
+          "2.Sync"]
 
  ;; [optional] popular topics from home
  :popular-topics ["1.Getting-Started/2.the-only-features-you-need-to-start"

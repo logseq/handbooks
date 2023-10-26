@@ -3,12 +3,12 @@
  :icon     "app-feature"
 
  ;; children as Topics
- :children ["commands"
-            "embeds"
-            "flashcards"
-            "graph-view"
-            "media-embeds"
-            "pdf-highlights"
+:children [;;"commands"
+            ;;"embeds"
+            ;;"flashcards"
+            ;;"graph-view"
+            ;;"media-embeds"
+            ;;"pdf-highlights"
             ;;"plugins"
             ;;"properties"
             ;;"publishing"
