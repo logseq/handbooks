@@ -24,11 +24,11 @@
 (defn- resolve-content!
   ([filepath] (resolve-content! filepath false))
   ([filepath create-if-not-exist?]
-   (let [f    (fs/real-path
-                (if (string? filepath)
-                  (fs/file (fs/path DOCS_ROOT filepath)) filepath))
+   (let [f (fs/real-path
+             (if (string? filepath)
+               (fs/file (fs/path DOCS_ROOT filepath)) filepath))
          edn? (string/ends-with? f ".edn")
-         md?  (string/ends-with? f ".md")]
+         md? (string/ends-with? f ".md")]
      (when (and (not (fs/exists? f))
                 (true? create-if-not-exist?))
        (if (fs/extension f)
@@ -41,7 +41,8 @@
                (edn/read-string)
 
                md?
-               (md/md-to-html-string)
+               (some-> (string/replace #"\n(\t+)-\s" #(string/replace (first %1) "\t" "  "))
+                       (md/md-to-html-string))
 
                dir?
                (fs/list-dir))))))
@@ -57,10 +58,10 @@
 (defn- parse-assets-from-a-category!
   [category file]
   (let [relative-root (fs/parent file)
-        assets-fn!    (fn [assets]
-                        (prn "[Handle assets]" assets)
-                        (-> assets
-                            identity))]
+        assets-fn! (fn [assets]
+                     (prn "[Handle assets]" assets)
+                     (-> assets
+                         identity))]
     (cond-> category
 
             (not (string/blank? (:content category)))
@@ -95,12 +96,12 @@
   ([root-or-fullpath? parent-key children]
    (->> (map (fn [k]
                (let [ext? (= "edn" (fs/extension k))
-                     f    (if (true? root-or-fullpath?)
-                            (fs/file k)
-                            (fs/path root-or-fullpath? (if ext? k (str k ".edn"))))]
+                     f (if (true? root-or-fullpath?)
+                         (fs/file k)
+                         (fs/path root-or-fullpath? (if ext? k (str k ".edn"))))]
                  (if-not (fs/exists? f)
                    (println "❌Error: topic file not exists! " f)
-                   (let [config       (resolve-content! f)
+                   (let [config (resolve-content! f)
                          content-file (fs/file (string/replace-first (.toString f) #".edn$" ".md"))]
                      [f (-> (cond-> config
 
@@ -117,10 +118,10 @@
 (defn- build-nodes [prefix nodes output]
   (->> nodes
        (map (fn [node-f]
-              (let [items$        (resolve-content! node-f)
-                    output        (try (resolve-content! (fs/path node-f "config.edn"))
-                                       (catch Exception _ {}))
-                    children      (filterv #(string/ends-with? (.toString %) ".edn") items$)
+              (let [items$ (resolve-content! node-f)
+                    output (try (resolve-content! (fs/path node-f "config.edn"))
+                                (catch Exception _ {}))
+                    children (filterv #(string/ends-with? (.toString %) ".edn") items$)
                     children-more (filterv #(and (fs/directory? %) (not (assets-dir? %))) items$)]
 
                 ;; build a category
@@ -129,11 +130,11 @@
                   (when-let [node (or (some-> (first metafile)
                                               (resolve-content!))
                                       {:title (fs/file-name node-f)})]
-                    (let [node-k    (-> (str prefix "/" (fs/file-name node-f))
-                                        (string/lower-case)
-                                        (csk/->snake_case_string)
-                                        (string/replace #"^[\/_]+" ""))
-                          node      (assoc node :key node-k)
+                    (let [node-k (-> (str prefix "/" (fs/file-name node-f))
+                                     (string/lower-case)
+                                     (csk/->snake_case_string)
+                                     (string/replace #"^[\/_]+" ""))
+                          node (assoc node :key node-k)
                           children' (:children node)]
 
                       ;; resolve file children (topics)
